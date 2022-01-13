@@ -12,11 +12,29 @@
   </Employee>
   <Employee>
     <Emp-id>2</Emp-id>
-    <Emp-name>Suman</Emp-name>
+    <Emp-name>Sumit</Emp-name>
     <Emp-age>47</Emp-age>
     <Emp-salary>60000</Emp-salary>
-    <Emp-emailid>suman@gmail.com</Emp-emailid>
+    <Emp-emailid>sumit@gmail.com</Emp-emailid>
     <Emp-phonenumber>8769054321</Emp-phonenumber>
+    <Emp-designation>Developer</Emp-designation>
+  </Employee>
+  <Employee>
+    <Emp-id>3</Emp-id>
+    <Emp-name>Suman</Emp-name>
+    <Emp-age>29</Emp-age>
+    <Emp-salary>60000</Emp-salary>
+    <Emp-emailid>sumit@gmail.com</Emp-emailid>
+    <Emp-phonenumber>8790546321</Emp-phonenumber>
+    <Emp-designation>Intern</Emp-designation>
+  </Employee>
+  <Employee>
+    <Emp-id>4</Emp-id>
+    <Emp-name>Sam</Emp-name>
+    <Emp-age>48</Emp-age>
+    <Emp-salary>60000</Emp-salary>
+    <Emp-emailid>sam@gmail.com</Emp-emailid>
+    <Emp-phonenumber>9876543219</Emp-phonenumber>
     <Emp-designation>Developer</Emp-designation>
   </Employee>
 </Companys>
