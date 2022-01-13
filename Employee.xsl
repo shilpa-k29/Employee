@@ -4,6 +4,20 @@
 		<!-- TODO: Auto-generated template -->
 		<html>
 		<head>
+        <style>
+			th{
+				color:#ec167f;
+				padding: 10px;
+				border: 1px solid blue;
+  border-radius: 10px;
+			}
+			h1, td{
+				color: blue;
+				padding: 10px;
+				border: 1px solid blue;
+  border-radius: 10px;
+			}
+		</style>
 		</head>
 		<body>
 		<h1 style="text-align:center">Employee Management System</h1>
@@ -17,9 +31,11 @@
 		<th>Mobile number</th>
 		<th>Designation</th>
 		<th>Promotion</th>
+       
 		
 		</tr>
 		<xsl:for-each select="Companys/Employee">
+		<!-- <xsl:sort select="Noofevents"></xsl:sort> -->
 		<tr>
 		<td>
 		<xsl:value-of select="Emp-id"></xsl:value-of>
@@ -28,9 +44,9 @@
 		<xsl:value-of select="Emp-name"></xsl:value-of>
 		</td>
 		<td>
-		<xsl:value-of select="Emp-age"></xsl:value-of>
-		</td>
-		<td>
+		 <xsl:value-of select="Emp-age"/>
+		 </td>
+		 <td>
 		<xsl:value-of select="Emp-salary"></xsl:value-of>
 		</td>
 		<td>
@@ -43,11 +59,16 @@
 		<xsl:value-of select="Emp-designation"></xsl:value-of>
 		</td>
 		<td>
-		<xsl:choose>
-		    <xsl:when test="age &gt; 50">Associate Project Manager</xsl:when>
-			<xsl:otherwise>Team leader</xsl:otherwise>
-		</xsl:choose>
+		   <xsl:choose>
+		    	<xsl:when test="Emp-age &gt; 49">Associate Project Manager</xsl:when>
+		    	<xsl:when test="Emp-age &gt; 39">Team Leader</xsl:when>
+		   		<xsl:otherwise>Developer</xsl:otherwise>
+		   </xsl:choose>
 		</td>
+		
+		
+		
+	 
 		</tr>
 		</xsl:for-each>
 		</table>
