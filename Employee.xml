@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Employee.xsl"?>
+<Companys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Employee.xsd">
+  <Employee>
+    <Emp-id>1</Emp-id>
+    <Emp-name>Sharath</Emp-name>
+    <Emp-age>54</Emp-age>
+    <Emp-salary>58000</Emp-salary>
+    <Emp-emailid>sharath@gmail.com</Emp-emailid>
+    <Emp-phonenumber>9876543210</Emp-phonenumber>
+    <Emp-designation>Associate Manager</Emp-designation>
+  </Employee>
+  <Employee>
+    <Emp-id>2</Emp-id>
+    <Emp-name>Suman</Emp-name>
+    <Emp-age>47</Emp-age>
+    <Emp-salary>60000</Emp-salary>
+    <Emp-emailid>suman@gmail.com</Emp-emailid>
+    <Emp-phonenumber>8769054321</Emp-phonenumber>
+    <Emp-designation>Developer</Emp-designation>
+  </Employee>
+</Companys>
