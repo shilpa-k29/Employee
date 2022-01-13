@@ -6,7 +6,8 @@
 <xs:element name="Employee" maxOccurs="unbounded">
 <xs:complexType>
 <xs:sequence>
-<xs:element name="Emp-id" type="xs:integer"></xs:element>
+
+ <xs:element name="Emp-id" type="xs:string"></xs:element>
 <xs:element name="Emp-name" type="xs:string"></xs:element>
 <xs:element name="Emp-age" type="age"></xs:element>
 <xs:element name="Emp-salary" type="salary"></xs:element>
@@ -19,7 +20,10 @@
 </xs:sequence>
 </xs:complexType>
 </xs:element>
-
+<xs:unique name="unique">
+      <xs:selector xpath="Employee"/>
+      <xs:field xpath="Emp-id"/>
+ </xs:unique>
 <xs:simpleType name="age">
     	<xs:restriction base="xs:integer">
     	<xs:minInclusive value="1"/>
