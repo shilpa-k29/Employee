@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+     integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+     <link href="bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0 0 20px;
+      font-weight: 400;
+      color: #1c87c9;
+      }
+      p {
+      margin: 0 0 5px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1c87c9;
+      }
+      form {
+      padding: 100px;
+      margin: 120px;
+      box-shadow: 0 2px 5px #f5f5f5; 
+      background: #f5f5f5; 
+      }
+      .fas {
+      margin: 25px 10px 0;
+      font-size: 72px;
+      color: #fff;
+      }
+      .fa-envelope {
+      transform: rotate(-20deg);
+      }
+      .fa-at , .fa-mail-bulk{
+      transform: rotate(10deg);
+      }
+      input, textarea {
+      width: calc(100% - 18px);
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #1c87c9;
+      outline: none;
+      }
+      input::placeholder {
+      color: #666;
+      }
+      button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #1c87c9; 
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      }
+      button:hover {
+      background: #2371a0;
+      }   
+      #message {
+  display:none;
+  /* background: white; */
+  /* color: black; */
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+  div span {
+  position: absolute;
+  padding: 10px;
+}
+.valid {
+  color: blue;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+}
+
+#comment {
+  color: black;
+} 
+      @media (min-width: 568px) {
+      .main-block {
+      flex-direction: row;
+      }
+      .left-part, form {
+      width: 50%;
+      }
+      .fa-envelope {
+      margin-top: 0;
+      margin-left: 20%;
+      }
+      .fa-at {
+      margin-top: -10%;
+      margin-left: 65%;
+      }
+      .fa-mail-bulk {
+      margin-top: 2%;
+      margin-left: 28%;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-envelope"></i>
+        <i class="fas fa-at"></i>
+        <i class="fas fa-mail-bulk"></i>
+        
+      </div>
+      <form action="/">
+        <h1>Feedback Form</h1>
+        <div class="info">
+            <div class="row">
+                <div class="mb-4 pb-2">
+                    <div class="form-outline form-check-inline mb-0 col-lg-11">
+                        <label class="form-label" for="form3Examplev2">Username</label>
+                      <input type="text" onkeypress="return test(event)" id="uname" class="form-control form-control-lg" required autocomplete="off"/>
+                      
+                    </div>
+                    <div id="muname" class="invalid" style="display:none;">       contain <b>character</b> only</div>
+                    </div>
+
+                <div class="mb-4 pb-2">
+                  <div class="form-outline form-check-inline mb-0 col-lg-11">
+                    <label class="form-label" for="form3Examplev4">Password</label>
+                    <input type="password" id="psd" class="form-control form-control-lg" required autocomplete="off"/>
+                   
+                  </div>
+                    <!-- <span style="font-family: Arial Unicode MS, Lucida Grande; color:Green;">
+                      &#10004;</span> -->
+                      <div id="message" style="display:none;" >
+                        <h6>Password must contain the following:</h6>
+                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                        <p id="capital" class="invalid">A <b>capital</b> letter</p>
+                        <p id="special" class="invalid">A <b>special</b>character</p>
+                        <p id="number" class="invalid">A <b>number</b></p>
+                        <!-- <p id="length" class="invalid">Minimum <b>8 characters</b></p> -->
+                      </div>  
+                </div>
+                
+
+                <div class="mb-4 pb-2">
+                  <div class="form-outline form-check-inline mb-0 col-lg-11">
+                    <label class="form-label" for="form3Examplev4">Name</label>
+                    <input type="text" id="fname" onkeypress="return test(event)" class="form-control form-control-lg" required autocomplete="off"/>
+                    
+                  </div>
+                  <!-- <span style="font-family: Arial Unicode MS, Lucida Grande; color:Green;">
+                    &#10004;</span> -->
+                    <div id="mname" class="invalid" style="display:none;">        contain <b>character</b> only</div>
+                </div>
+
+                <div class="mb-4 pb-2">
+                  <div class="form-outline form-check-inline mb-0 col-lg-11">
+                    <label class="form-label" for="form3Examplev4">E-mail</label>
+                    <input type="email" id="uemail" class="form-control form-control-lg" required autocomplete="off"/>
+                    
+                  </div>
+                  <!-- <span style="font-family: Arial Unicode MS, Lucida Grande; color:Green;">
+                    &#10004;</span> -->
+                    <div id="memail" class="invalid" style="display:none;">         format <b>username@christuniversity.in </b>& <b>lowercase</b> values</div>
+                </div>
+
+                <div class="mb-4 pb-2">
+                  <div class="form-outline form-check-inline mb-0 col-lg-11">
+                    <label class="form-label" for="form3Examplev4">Address</label>
+                    <input type="text" id="address" class="form-control form-control-lg" required autocomplete="off"/>
+                    
+                  </div>
+                  <!-- <span style="font-family: Arial Unicode MS, Lucida Grande; color:Green;">
+                    &#10004;</span>
+                    <span style="font-family: Wingdings; color:red;">&#251;</span><br> -->
+                    <div id="maddress" class="invalid" style="display:none;">       contain <b>characters & numbers</b> only</div>
+                </div>
+
+                </div>
+                
+
+              </div>
+                
+        <div >
+         1. What are things that you like:
+ <ul>
+    Campus<input type="checkbox" name="camp">
+    Location<input type="checkbox" name="camp">
+    Student<input type="checkbox" name="camp">
+    Atmosphere<input type="checkbox" name="camp">
+    Dorm Room<input type="checkbox" name="camp">
+    Sport<input type="checkbox" name="camp">
+ </ul><br>
+2. How you became interested in university:
+ <ul>
+ Friends<input type="radio" name="iu">
+ Television<input type="radio" name="iu">
+ Internet<input type="radio" name="iu">
+ Others<input type="radio" name="iu">
+ </ul>
+        </div>
+        <p>Message</p>
+        <div>
+          <textarea rows="4"></textarea>
+        </div>
+        <button type="submit" href="/">Submit</button><br><br><br>
+        <button type="reset" href="/">Reset</button>
+      </form>
+    </div>
+</div> 
+  </body>
+</html>
+<script>
+    var uname = document.getElementById('uname');
+    var pswd = document.getElementById('psd');
+    var fname = document.getElementById('fname');
+    var uemail = document.getElementById('uemail');
+    var address = document.getElementById('address');
+    var comment = document.getElementById('comment');
+    // var span = document.getElementsByTagName('span');
+    function test(event)
+          {
+              let code=event.which;
+              if(code>47&&code<58)
+              return false;
+              else
+              return true;
+          }
+    
+    
+          uname.onfocus = function() {
+      document.getElementById("muname").style.display = "block";
+    }
+    
+    // When the user clicks outside of the password field, hide the message box
+    uname.onblur = function() {
+      document.getElementById("muname").style.display = "none";
+    }
+    
+    uname.onkeyup = function() {
+          const reg = /^[a-zA-Z]{1,}$/;
+          if (reg.test(uname.value.trim())) {
+          muname.classList.remove("invalid");
+        muname.classList.add("valid");
+          } 
+          else if(uname.value.trim()==''){
+          muname.classList.remove("valid");
+          muname.classList.add("invalid");
+          }
+          else {
+          muname.classList.remove("valid");
+          muname.classList.add("invalid");
+          }
+        }
+    
+      fname.onfocus = function() {
+      document.getElementById("mname").style.display = "block";
+    }
+    fname.onblur = function() {
+      document.getElementById("mname").style.display = "none";
+    }
+    fname.onkeyup = function() {
+          const reg = /^[a-zA-Z]{1,}$/;
+          if (reg.test(fname.value.trim())) {
+          mname.classList.remove("invalid");
+        mname.classList.add("valid");
+          } 
+          else if(fname.value.trim()==''){
+          mname.classList.remove("valid");
+          mname.classList.add("invalid");
+          }
+          else {
+          mname.classList.remove("valid");
+          mname.classList.add("invalid");
+          }
+        }
+    
+    
+    pswd.onfocus = function() {
+      document.getElementById("message").style.display = "block";
+    }
+    
+    // When the user clicks outside of the password field, hide the message box
+    pswd.onblur = function() {
+      document.getElementById("message").style.display = "none";
+    }
+        pswd.onkeyup = function() {
+      // Validate lowercase letters
+      var lowerCaseLetters = /[a-z]/g;
+      if(pswd.value.match(lowerCaseLetters)) {  
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+      } else {
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+      }
+      
+      // Validate capital letters
+      var upperCaseLetters = /[A-Z]/g;
+      if(pswd.value.match(upperCaseLetters)) {  
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
+      } else {
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+      }
+    
+      //Validate special char
+      var specialchar = /[~`!@#$%^&*\(\)\-_+={}\[\]|\\;:"<>,./?]/g;
+      if(pswd.value.match(specialchar)) {  
+        special.classList.remove("invalid");
+        special.classList.add("valid");
+      } else {
+        special.classList.remove("valid");
+        special.classList.add("invalid");
+      }
+    
+      // Validate numbers
+      var numbers = /[0-9]/g;
+      if(pswd.value.match(numbers)) {  
+        number.classList.remove("invalid");
+        number.classList.add("valid");
+      } else {
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+      }
+      
+      // Validate length
+      if(pswd.value.length >= 8) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+      } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+      }
+    }
+    
+    uemail.onfocus = function() {
+      document.getElementById("memail").style.display = "block";
+    }
+    
+    // When the user clicks outside of the password field, hide the message box
+    uemail.onblur = function() {
+      document.getElementById("memail").style.display = "none";
+    }
+    uemail.onkeyup = function() {
+          // const reg = /^[a-zA-Z0-9]{1,}$/;
+          // if (reg.test(uemail.value.trim())) {
+          const regex1=/^([a-z0-9\.-]+)@christuniversity.in$/;
+          //  const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\.in$/;
+           if(regex1.test(uemail.value))
+           {
+          memail.classList.remove("invalid");
+          memail.classList.add("valid");
+          } 
+          else if(uemail.value.trim()==''){
+          memail.classList.remove("valid");
+          memail.classList.add("invalid");
+          }
+          else {
+          memail.classList.remove("valid");
+          memail.classList.add("invalid");
+          }
+      }
+    
+    address.onfocus = function() {
+      document.getElementById("maddress").style.display = "block";
+    }
+    
+    // When the user clicks outside of the password field, hide the message box
+    address.onblur = function() {
+      document.getElementById("maddress").style.display = "none";
+    }
+    
+    address.onkeyup = function() {
+          const reg = /^[a-zA-Z0-9]{1,}$/;
+          if (reg.test(address.value.trim())) {
+          maddress.classList.remove("invalid");
+        maddress.classList.add("valid");
+          } 
+          else if(address.value.trim()==''){
+          maddress.classList.remove("valid");
+          maddress.classList.add("invalid");
+          }
+          else {
+          maddress.classList.remove("valid");
+          maddress.classList.add("invalid");
+          }
+        }
+        
+      comment.onfocus = function() {
+      document.getElementById("mcomment").style.display = "block";
+    }
+    
+    // When the user clicks outside of the password field, hide the message box
+    comment.onblur = function() {
+      document.getElementById("mcomment").style.display = "none";
+    }
+    
+    comment.onkeyup = function() {
+          const reg = /^[a-zA-Z0-9]{1,}$/;
+          if (reg.test(comment.value.trim())) {
+          mcomment.classList.remove("invalid");
+        mcomment.classList.add("valid");
+          } 
+          else if(comment.value.trim()==''){
+          mcomment.classList.remove("valid");
+          mcomment.classList.add("invalid");
+          }
+          else {
+          mcomment.classList.remove("valid");
+          mcomment.classList.add("invalid");
+          }
+        }
+      $("input:checkbox").on('click', function() {
+      // in the handler, 'this' refers to the box clicked on
+      var $box = $(this);
+      if ($box.is(":checked")) {
+        // the name of the box is retrieved using the .attr() method
+        // as it is assumed and expected to be immutable
+        var group = "input:checkbox[name='" + $box.attr("name") + "']";
+        // the checked state of the group/box on the other hand will change
+        // and the current value is retrieved using .prop() method
+        $(group).prop("checked", false);
+        $box.prop("checked", true);
+      } else {
+        $box.prop("checked", false);
+      }
+    });
+    </script>
