@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cat.xsl"?>
+<Christ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cat.xsd">
+  <ComputerScience>
+    <Stu-name>Sharath</Stu-name>
+    <stu-uni>Christ</stu-uni>
+    <stu-pho>127867</stu-pho>
+    <stu-email>sharath@gmail.com</stu-email>
+  </ComputerScience>
+   <ComputerScience>
+    <Stu-name>shilpa</Stu-name>
+    <stu-uni>Christ</stu-uni>
+    <stu-pho>987654320</stu-pho>
+    <stu-email>shilpa@gmail.com</stu-email>
+  </ComputerScience>
+   <ComputerScience>
+    <Stu-name>sam</Stu-name>
+    <stu-uni>Christ</stu-uni>
+    <stu-pho>987654210</stu-pho>
+    <stu-email>sam@gmail.com</stu-email>
+  </ComputerScience>
+</Christ>
