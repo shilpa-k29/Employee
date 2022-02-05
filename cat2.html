@@ -260,7 +260,7 @@
 
 		  
 							<div class="form-outline form-check-inline mb-0 col-lg-11">
-							  <button type="submit" id="reg" class="btn btn-primary btn-lg">Register</button>&nbsp;
+							  <button type="button" id="reg" class="btn btn-primary btn-lg" onclick="submit_reg()">Register</button>&nbsp;
                               <button type="reset" class="btn btn-primary btn-lg">Reset</button>
 							</div>
 		  
@@ -886,20 +886,21 @@ pswd.onblur = function() {
   }
   
   // Validate length
-  if(pswd.value.length >= 8) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-    p=1;
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
+//   if(pswd.value.length >= 8) {
+//     length.classList.remove("invalid");
+//     length.classList.add("valid");
+//     p=1;
+//   } else {
+//     length.classList.remove("valid");
+//     length.classList.add("invalid");
     // document.getElementById("fname").disabled = false;
     //     document.getElementById("email").disabled = false;
     //     document.getElementById("no").disabled = false;
     //     document.getElementById("age").disabled = false;
-    p=0;
+    // p=0;
   }
-}
+// }
+
 	number.onkeydown = function() {
 	  const regnum = /^[0-9]{9}$/;
 	  if (regnum.test(number.value)) {
@@ -997,79 +998,8 @@ email.onkeyup = function() {
 	  }
   }
 
-  function submit_form()
+  function submit_reg()
 {
-  
-  if(f==0){
-    document.getElementById("muname").style.display = "block";
-    document.getElementById("muname").innerText = "Invalid name";
-		document.getElementById("muname").style.color = "red";
-    return false;
-  }
-  else if(a==0)
-  {
-  document.getElementById("mage").style.display = "block";
-  document.getElementById("mage").innerText = "Invalid age";
-		document.getElementById("mage").style.color = "red";
-    return false;
-  }
-  else if(e==0)
-  {
-    document.getElementById("memail").style.display = "block";
-    document.getElementById("memail").innerText = "Invalid email";
-		document.getElementById("memail").style.color = "red";
-      return false;
-  }
-  else if(n==0)
-  {
-    document.getElementById("mnumber").style.display = "block";
-    document.getElementById("mnumber").innerText = "Invalid number";
-		document.getElementById("mnumber").style.color = "red";
-      return false;
-  }
-  else if(p==0)
-  {
-    document.getElementById("message").style.display = "block";
-    document.getElementById("message").innerText = "Invalid password";
-		document.getElementById("message").style.color = "red";
-    return false;
-  }
-  else if(b==0)
-  {
-    document.getElementById("mbranch").style.display = "block";
-    document.getElementById("mbranch").innerText = "Invalid branch";
-		document.getElementById("mbranch").style.color = "red";
-    return false;
-  }
-  else if(u==0)
-  {
-    document.getElementById("muniversity").style.display = "block";
-    document.getElementById("muniversity").innerText = "Invalid university";
-		document.getElementById("muniversity").style.color = "red";
-    return false;
-  }
-  else if(s==0)
-  {
-    document.getElementById("mstate").style.display = "block";
-    document.getElementById("mstate").innerText = "Invalid state";
-		document.getElementById("mstate").style.color = "red";
-    return false;
-  }
-  else if(d==0)
-  {
-    document.getElementById("maddress").style.display = "block";
-    document.getElementById("maddress").innerText = "Invalid Address";
-		document.getElementById("maddress").style.color = "red";
-    return false;
-  }
-  else if(un==0)
-  {
-    document.getElementById("musername").style.display = "block";
-    document.getElementById("musername").innerText = "Invalid Username";
-		document.getElementById("musername").style.color = "red";
-    return false;
-  }
-  else{
     // username and email in cookies
     //Add their phone number and email in Local Storage
     document.cookie="name="+fname.value+";expires=Sun,13 Feb 2022 00:00:00 UTC;";
@@ -1079,8 +1009,8 @@ email.onkeyup = function() {
               localStorage.setItem('email',email.value);
               alert("Local Storage Created Sucessfully");
     alert("Form Submitted");
-    return true;
-  }
+    return false;
+  
 }
 </script>
 	
