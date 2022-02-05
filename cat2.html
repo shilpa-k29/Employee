@@ -1,7 +1,9 @@
-<!DOCTYPE html>
-<html>
+
+
+<!doctype html>
+<html lang="en">
   <head>
-    <title>TECHNOVID</title>
+    <title>TECHNOVA</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
      <link href="bootstrap.css" rel="stylesheet">
@@ -18,7 +20,7 @@
       h1 {
       margin: 0 0 20px;
       font-weight: 400;
-      color: #fa70bc;
+      color: #fc4db9;
       }
       p {
       margin: 0 0 5px;
@@ -29,7 +31,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: #fa70bc;
+      background: #fc4db9;
       }
       form {
       padding: 100px;
@@ -40,7 +42,7 @@
       .fas {
       margin: 25px 10px 0;
       font-size: 72px;
-      color: rgb(255, 255, 255);
+      color: #fff;
       }
       .fa-envelope {
       transform: rotate(-20deg);
@@ -83,7 +85,7 @@
   padding: 10px;
 }
 .valid {
-  color: rgb(250, 135, 215);
+  color: blue;
 }
 
 .valid:before {
@@ -101,6 +103,9 @@
   left: -35px;
 }
 
+#comment {
+  color: black;
+} 
       @media (min-width: 568px) {
       .main-block {
       flex-direction: row;
@@ -122,345 +127,961 @@
       }
       }
     </style>
-  </head>
-  <body>
-    <div class="main-block">
-      <div class="left-part">
-        <i class="fas fa-envelope"></i>
-        <i class="fas fa-at"></i>
-        <i class="fas fa-mail-bulk"></i>
-        
-      </div>
-      <form action="/">
-        <h1>Gateways 2022</h1>
-        <div class="info">
-            <div class="row">
-                <div class="mb-4 pb-2">
-                    <div class="form-outline form-check-inline mb-0 col-lg-11">
-                        <label class="form-label" for="form3Examplev2">Username</label>
-                      <input type="text" onkeypress="return test(event)" id="uname" class="form-control form-control-lg" required autocomplete="off"/>
-                      
-                    </div>
-                    <div id="muname" class="invalid" style="display:none;">       contain <b>character</b> only</div>
-                    </div>
 
-                <div class="mb-4 pb-2">
-                  <div class="form-outline form-check-inline mb-0 col-lg-11">
-                    <label class="form-label" for="form3Examplev4">Password</label>
-                    <input type="password" id="psd" class="form-control form-control-lg" required autocomplete="off"/>
-                   
-                  </div>
-                    <!-- <span style="font-family: Arial Unicode MS, Lucida Grande; color:Green;">
-                      &#10004;</span> -->
-                      <div id="message" style="display:none;" >
-                        <h6>Password must contain the following:</h6>
-                        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                        <p id="capital" class="invalid">A <b>capital</b> letter</p>
-                        <p id="special" class="invalid">A <b>special</b>character</p>
-                        <p id="number" class="invalid">A <b>number</b></p>
-                        <!-- <p id="length" class="invalid">Minimum <b>8 characters</b></p> -->
-                      </div>  
-                </div>
-                
-
-                <div class="mb-4 pb-2">
-                  <div class="form-outline form-check-inline mb-0 col-lg-11">
-                    <label class="form-label" for="form3Examplev4">Name</label>
-                    <input type="text" id="fname" onkeypress="return test(event)" class="form-control form-control-lg" required autocomplete="off"/>
-                    
-                  </div>
-                  <!-- <span style="font-family: Arial Unicode MS, Lucida Grande; color:Green;">
-                    &#10004;</span> -->
-                    <div id="mname" class="invalid" style="display:none;">        contain <b>character</b> only</div>
-                </div>
-                <div class="mb-4 pb-2">
-                  <div class="form-outline form-check-inline mb-0 col-lg-11">
-                    <label class="form-label" for="form3Examplev4">University Name</label>
-                    <input type="text" id="clge" class="form-control form-control-lg" required autocomplete="off"/>
-                    <div class="mb-4 pb-2">
-                      <div class="form-outline form-check-inline mb-0 col-lg-11"></div>
-                      <label class="form-label" for="form3Examplev4">Phone</label>
-                      <input type="number" id="phone" class="field text-field tel-field" required>
-                      <span></span>
-                  </div>  
-                  </div>
-                  <div class="mb-4 pb-2">
-                    <div class="form-outline form-check-inline mb-0 col-lg-11">
-                      <label class="form-label" for="form3Examplev4">Age</label>
-                      <input type="age" id="clge" class="form-control form-control-lg" required autocomplete="off"/>
-                      
-                    </div>
-
-                <div class="mb-4 pb-2">
-                  <div class="form-outline form-check-inline mb-0 col-lg-11">
-                    <label class="form-label" for="form3Examplev4">E-mail</label>
-                    <input type="email" id="uemail" class="form-control form-control-lg" required autocomplete="off"/>
-                    
-                  </div>
-                  <!-- <span style="font-family: Arial Unicode MS, Lucida Grande; color:Green;">
-                    &#10004;</span> -->
-                    <div id="memail" class="invalid" style="display:none;">         format <b>username@christuniversity.in </b>& <b>lowercase</b> values</div>
-                </div>
-                <div class="mb-4 pb-2">
-                  <label class="form-outline form-check-inline mb-0 col-lg-11"> State</label>
-                  <select class="field form-dropdown">
-                      <option value="k"> Karnataka </option>
-                      <option value="m"> Maharastra </option>
-                      <option value="ke"> Kerala </option>
-                      <option value="ma"> Tamil Nadu </option>
-                      
-                  </select>
-              </div>
-
-            <div class="mb-4 pb-2">
-              <div class="form-outline form-check-inline mb-0 col-lg-11">
-                <label class="form-label" for="form3Examplev4">Address</label>
-                <input type="text" id="address" class="form-control form-control-lg" required autocomplete="off"/>
-                
-              </div>
-
-              <!-- <span style="font-family: Arial Unicode MS, Lucida Grande; color:Green;">
-                &#10004;</span>
-                <span style="font-family: Wingdings; color:red;">&#251;</span><br> -->
-                <div id="maddress" class="invalid" style="display:none;">       contain <b>characters & numbers</b> only</div>
+	</head>
+	<body>
+        <div class="main-block">
+            <div class="left-part">
+              <i class="fas fa-envelope"></i>
+              <i class="fas fa-at"></i>
+              <i class="fas fa-mail-bulk"></i>
+              
             </div>
-
-            </div>
+            <form action="/">
+              <h1>GATEWAYS</h1>
+              <div class="info">
+                  <div class="row">
+                      <div class="mb-4 pb-2">
+                          <div class="form-outline form-check-inline mb-0 col-lg-11">
+                              <label class="form-label" for="form3Examplev2">Username</label>
+		  
+						  <form class="mx-1 mx-md-4" onsubmit="return submit_form();">
+		  
+							<div class="d-flex flex-row align-items-center mb-4">
+							  <!-- <span><i class="fas fa-user fa-lg me-3 fa-fw icon-white" ></i></span> -->
+							  <div class="form-outline flex-fill mb-0">
+								<!-- <input type="text" id="form3Example1c" class="form-control" /> -->
+								<input type="text" onkeypress="return test(event)" id="fname" placeholder="Name*" class="form-control" required/> 
+								<span id="muname" style="display: none;"></span>
+								
+							  </div>
+							</div>
+                            
+                            <div class="mb-4 pb-2">
+                                <div class="form-outline form-check-inline mb-0 col-lg-11">
+                                    <label class="form-label" for="form3Examplev2">Branch</label>
             
-
+            <input type="text" id="branch" placeholder="Branch" class="form-control" required/>
+            <span id="mbranch" style="display: none;"></span>
+            
           </div>
-          <div class="mb-4 pb-2">
-            <label class="form-outline form-check-inline mb-0 col-lg-11"> Branch</label>
-            <select class="field form-dropdown">
-                <option value="mca"> MCA </option>
-                <option value="BCA"> BCA </option>
-                <option value="mba"> MBA </option>
-                <option value="ma"> MSC </option>
-                
-            </select>
         </div>
-                
+        <div class="mb-4 pb-2">
+            <div class="form-outline form-check-inline mb-0 col-lg-11">
+                <label class="form-label" for="form3Examplev2">University</label>
+            
+            <input type="text" id="university" placeholder="university" class="form-control" required/>
+            <span id="muniversity" style="display: none;"></span>
+            
+          </div>
+        </div>
+        <div class="mb-4 pb-2">
+            <div class="form-outline form-check-inline mb-0 col-lg-11">
+                <label class="form-label" for="form3Examplev2">State</label>
+            
+            <input type="text" id="state" placeholder="State" class="form-control" required/>
+            <span id="mstate" style="display: none;"></span>
+            
+          </div>
+        </div>
+        <div class="mb-4 pb-2">
+            <div class="form-outline form-check-inline mb-0 col-lg-11">
+                <label class="form-label" for="form3Examplev2">Address</label>
+            <input type="text" id="address" placeholder="Address" class="form-control" required/>
+            <span id="maddress" style="display: none;"></span>
+            
+          </div>
+        </div>
+        <div class="mb-4 pb-2">
+            <div class="form-outline form-check-inline mb-0 col-lg-11">
+                <label class="form-label" for="form3Examplev2">Username</label>
+            <input type="text" id="username" placeholder="Username" class="form-control" required/>
+            <span id="musername" style="display: none;"></span>
+            
+          </div>
+        </div>
         
-    </div>
-</div> 
-  </body>
+
+        <div class="mb-4 pb-2">
+            <div class="form-outline form-check-inline mb-0 col-lg-11">
+                <label class="form-label" for="form3Examplev2">Age</label>
+								
+								<input type="number" id="age" placeholder="Age" class="form-control" required/>
+								<span id="mage" style="display: none;"></span>
+								
+							  
+							</div>
+							
+		  
+							<div class="mb-4 pb-2">
+                                <div class="form-outline form-check-inline mb-0 col-lg-11">
+                                    <label class="form-label" for="form3Examplev2">E-mail</label>
+								
+								<input type="email" id="email" placeholder="E-mail" class="form-control" required />
+								<span id="memail" ></span>
+								
+							  </div>
+							</div>
+		  
+							<div class="mb-4 pb-2">
+                                <div class="form-outline form-check-inline mb-0 col-lg-11">
+                                    <label class="form-label" for="form3Examplev2">Phone-Number</label>
+								
+								<input type="number" id="no" placeholder="Phone-Number" class="form-control" required />
+								<span id="mnumber" style="display: none;"></span>
+								
+							  </div>
+							</div>
+
+							<div class="mb-4 pb-2">
+                                <div class="form-outline form-check-inline mb-0 col-lg-11">
+                                    <label class="form-label" for="form3Examplev2">Password</label>
+								
+								<input type="password" id="pswd" placeholder="Password" class="form-control" required/>
+								<span ></span>
+								
+								
+							  </div>
+							</div>
+                          
+                                <span id="mstrength" class="form-lable invalid" style="display:none;">Weak</span><br><br>
+                                  <!-- <span style="font-family: Arial Unicode MS, Lucida Grande; color:Green;">
+                                    &#10004;</span> -->
+                                    <div id="message" style="display:none;" >
+                                      <h6>Password must contain the following:</h6>
+                                      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                      <p id="capital" class="invalid">A <b>capital</b> letter</p>
+                                      <p id="special" class="invalid">A <b>special</b>character</p>
+                                      <p id="num" class="invalid">A <b>number</b></p>
+                                      <!-- <p id="length" class="invalid">Minimum <b>8 characters</b></p> -->
+                                    </div>  
+                              
+
+
+		  
+							<div class="form-outline form-check-inline mb-0 col-lg-11">
+							  <button type="submit" id="reg" class="btn btn-primary btn-lg">Register</button>&nbsp;
+                              <button type="reset" class="btn btn-primary btn-lg">Reset</button>
+							</div>
+		  
+						  </form>
+		  
+						</div>
+						
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  
+
+	<script src="jquery.min.js"></script>
+  <script src="popper.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="main.js"></script>
+
+	</body>
 </html>
 <script>
-    var uname = document.getElementById('uname');
-    var pswd = document.getElementById('psd');
-    var number = document.getElementById('phone');
-    var fname = document.getElementById('fname');
-    var uemail = document.getElementById('uemail');
+	var fname = document.getElementById('fname');
+	var age = document.getElementById('age');
+	var email = document.getElementById('email');
+	var number = document.getElementById('no');
+	var pswd = document.getElementById('pswd');
+    var branch = document.getElementById('branch');
+    var university = document.getElementById('university');
+    var state = document.getElementById('state');
     var address = document.getElementById('address');
-    var comment = document.getElementById('comment');
-    // var span = document.getElementsByTagName('span');
-    function test(event)
-          {
-              let code=event.which;
-              if(code>47&&code<58)
-              return false;
-              else
-              return true;
-          }
+    var username = document.getElementById('username');
     
-         
-          uname.onfocus = function() {
-      document.getElementById("muname").style.display = "block";
-    }
-    
-    // When the user clicks outside of the password field, hide the message box
-    uname.onblur = function() {
-      document.getElementById("muname").style.display = "none";
-    }
-    
-    uname.onkeyup = function() {
-          const reg = /^[a-zA-Z]{1,}$/;
-          if (reg.test(uname.value.trim())) {
-          muname.classList.remove("invalid");
-        muname.classList.add("valid");
-          } 
-          else if(uname.value.trim()==''){
-          muname.classList.remove("valid");
-          muname.classList.add("invalid");
-          }
-          else {
-          muname.classList.remove("valid");
-          muname.classList.add("invalid");
-          }
-        }
-    
-      fname.onfocus = function() {
-      document.getElementById("mname").style.display = "block";
-    }
-    fname.onblur = function() {
-      document.getElementById("mname").style.display = "none";
-    }
-    fname.onkeyup = function() {
-          const reg = /^[a-zA-Z]{1,}$/;
-          if (reg.test(fname.value.trim())) {
-          mname.classList.remove("invalid");
-        mname.classList.add("valid");
-          } 
-          else if(fname.value.trim()==''){
-          mname.classList.remove("valid");
-          mname.classList.add("invalid");
-          }
-          else {
-          mname.classList.remove("valid");
-          mname.classList.add("invalid");
-          }
-        }
-    
-    
-    pswd.onfocus = function() {
-      document.getElementById("message").style.display = "block";
-    }
-    
-    // When the user clicks outside of the password field, hide the message box
-    pswd.onblur = function() {
-      document.getElementById("message").style.display = "none";
-    }
-        pswd.onkeyup = function() {
-      // Validate lowercase letters
-      var lowerCaseLetters = /[a-z]/g;
-      if(pswd.value.match(lowerCaseLetters)) {  
-        letter.classList.remove("invalid");
-        letter.classList.add("valid");
-      } else {
-        letter.classList.remove("valid");
-        letter.classList.add("invalid");
-      }
-      
-      // Validate capital letters
-      var upperCaseLetters = /[A-Z]/g;
-      if(pswd.value.match(upperCaseLetters)) {  
-        capital.classList.remove("invalid");
-        capital.classList.add("valid");
-      } else {
-        capital.classList.remove("valid");
-        capital.classList.add("invalid");
-      }
-    
-      //Validate special char
-      var specialchar = /[~`!@#$%^&*\(\)\-_+={}\[\]|\\;:"<>,./?]/g;
-      if(pswd.value.match(specialchar)) {  
-        special.classList.remove("invalid");
-        special.classList.add("valid");
-      } else {
-        special.classList.remove("valid");
-        special.classList.add("invalid");
-      }
-    
-      // Validate numbers
-      var numbers = /[0-9]/g;
-      if(pswd.value.match(numbers)) {  
-        number.classList.remove("invalid");
-        number.classList.add("valid");
-      } else {
-        number.classList.remove("valid");
-        number.classList.add("invalid");
-      }
-      
-      // Validate length
-      if(pswd.value.length >= 8) {
-        length.classList.remove("invalid");
-        length.classList.add("valid");
-      } else {
-        length.classList.remove("valid");
-        length.classList.add("invalid");
-      }
-    }
-    
-    uemail.onfocus = function() {
-      document.getElementById("memail").style.display = "block";
-    }
-    
-    // When the user clicks outside of the password field, hide the message box
-    uemail.onblur = function() {
-      document.getElementById("memail").style.display = "none";
-    }
-    uemail.onkeyup = function() {
-          // const reg = /^[a-zA-Z0-9]{1,}$/;
-          // if (reg.test(uemail.value.trim())) {
-          const regex1=/^([a-z0-9\.-]+)@christuniversity.in$/;
-          //  const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\.in$/;
-           if(regex1.test(uemail.value))
-           {
-          memail.classList.remove("invalid");
-          memail.classList.add("valid");
-          } 
-          else if(uemail.value.trim()==''){
-          memail.classList.remove("valid");
-          memail.classList.add("invalid");
-          }
-          else {
-          memail.classList.remove("valid");
-          memail.classList.add("invalid");
-          }
-      }
-    
-    address.onfocus = function() {
-      document.getElementById("maddress").style.display = "block";
-    }
-    
-    // When the user clicks outside of the password field, hide the message box
-    address.onblur = function() {
-      document.getElementById("maddress").style.display = "none";
-    }
-    
+	var span = document.getElementsByTagName('span');
+    var f,a,e,n,p,b,u,s,d,un;
+
+    username.onkeyup = function() {
+	  // const reg = /^[a-zA-Z0-9]{1,}$/;
+	  // if (reg.test(uemail.value.trim())) {
+      const regex1=/^([A-Za-z0-9/-]+)$/;
+    //    const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\christuniversity.in$/;
+       if(regex1.test(username.value))
+       {
+        document.getElementById("musername").innerText = "Valid Username Name";
+		document.getElementById("musername").style.color = "lime";
+      document.getElementById("fname").disabled = false;
+        document.getElementById("age").disabled = false;
+        document.getElementById("pswd").disabled = false;
+        document.getElementById("no").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("university").disabled = false;
+        document.getElementById("branch").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("reg").disabled = false;
+      un=1;
+	  } 
+	  else if(university.value.trim()==''){
+        document.getElementById("musername").innerText = "* Required field";
+		document.getElementById("musername").style.color = "red";
+       document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("reg").disabled = true;
+        un=0;
+	  }
+	  else {
+        document.getElementById("musername").innerText = "InValid Username";
+		document.getElementById("musername").style.color = "red";
+       document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("reg").disabled = true;
+        un=0;
+	  }
+  }
+
+
     address.onkeyup = function() {
-          const reg = /^[a-zA-Z0-9]{1,}$/;
-          if (reg.test(address.value.trim())) {
-          maddress.classList.remove("invalid");
-        maddress.classList.add("valid");
-          } 
-          else if(address.value.trim()==''){
-          maddress.classList.remove("valid");
-          maddress.classList.add("invalid");
-          }
-          else {
-          maddress.classList.remove("valid");
-          maddress.classList.add("invalid");
-          }
+	  // const reg = /^[a-zA-Z0-9]{1,}$/;
+	  // if (reg.test(uemail.value.trim())) {
+      const regex1=/^([A-Za-z0-9/-]+)$/;
+    //    const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\christuniversity.in$/;
+       if(regex1.test(address.value))
+       {
+        document.getElementById("maddress").innerText = "Valid address Name";
+		document.getElementById("maddress").style.color = "lime";
+      document.getElementById("fname").disabled = false;
+        document.getElementById("age").disabled = false;
+        document.getElementById("pswd").disabled = false;
+        document.getElementById("no").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("university").disabled = false;
+        document.getElementById("branch").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("username").disabled = false;
+        document.getElementById("reg").disabled = false;
+      d=1;
+	  } 
+	  else if(university.value.trim()==''){
+        document.getElementById("maddress").innerText = "* Required field";
+		document.getElementById("maddress").style.color = "red";
+      document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("reg").disabled = true;
+        document.getElementById("username").disabled = true;
+        d=0; 
+	  }
+	  else {
+        document.getElementById("maddress").innerText = "InValid address";
+		document.getElementById("maddress").style.color = "red";
+       document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        d=0;
+	  }
+  }
+
+    state.onkeyup = function() {
+	  // const reg = /^[a-zA-Z0-9]{1,}$/;
+	  // if (reg.test(uemail.value.trim())) {
+      const regex1=/^([A-Za-z]+)$/;
+    //    const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\christuniversity.in$/;
+       if(regex1.test(state.value))
+       {
+        document.getElementById("mstate").innerText = "Valid state Name";
+		document.getElementById("mstate").style.color = "lime";
+      document.getElementById("fname").disabled = false;
+        document.getElementById("age").disabled = false;
+        document.getElementById("pswd").disabled = false;
+        document.getElementById("no").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("university").disabled = false;
+        document.getElementById("branch").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("username").disabled = false;
+        document.getElementById("reg").disabled = false;
+      s=1;
+	  } 
+	  else if(university.value.trim()==''){
+        document.getElementById("mstate").innerText = "* Required field";
+		document.getElementById("mstate").style.color = "red";
+       document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        s=0;
+	  }
+	  else {
+        document.getElementById("mstate").innerText = "InValid state";
+		document.getElementById("mstate").style.color = "red";
+     document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        s=0;
+	  }
+  }
+
+    university.onkeyup = function() {
+	  // const reg = /^[a-zA-Z0-9]{1,}$/;
+	  // if (reg.test(uemail.value.trim())) {
+      const regex1=/^([A-Za-z ]+)$/;
+    //    const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\christuniversity.in$/;
+       if(regex1.test(university.value))
+       {
+        document.getElementById("muniversity").innerText = "Valid University Name";
+		document.getElementById("muniversity").style.color = "lime";
+      document.getElementById("fname").disabled = false;
+        document.getElementById("age").disabled = false;
+        document.getElementById("pswd").disabled = false;
+        document.getElementById("no").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("branch").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("username").disabled = false;
+        document.getElementById("reg").disabled = false;
+      u=1;
+	  } 
+	  else if(university.value.trim()==''){
+        document.getElementById("muniversity").innerText = "* Required field";
+		document.getElementById("muniversity").style.color = "red";
+       document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("reg").disabled = true;
+        document.getElementById("username").disabled = true;
+        u=0;
+	  }
+	  else {
+        document.getElementById("muniversity").innerText = "InValid University";
+		document.getElementById("muniversity").style.color = "red";
+      document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("reg").disabled = true;
+        document.getElementById("username").disabled = true;
+        u=0; 
+	  }
+  }
+	
+
+    branch.onkeyup = function() {
+	  // const reg = /^[a-zA-Z0-9]{1,}$/;
+	  // if (reg.test(uemail.value.trim())) {
+      const regex1=/^([a-zA-Z ]+)$/;
+    //    const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\christuniversity.in$/;
+       if(regex1.test(branch.value))
+       {
+        document.getElementById("mbranch").innerText = "Valid Branch";
+		document.getElementById("mbranch").style.color = "lime";
+      document.getElementById("fname").disabled = false;
+        document.getElementById("age").disabled = false;
+        document.getElementById("pswd").disabled = false;
+        document.getElementById("no").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("university").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("username").disabled = false;
+        document.getElementById("reg").disabled = false;
+      b=1;
+	  } 
+	  else if(email.value.trim()==''){
+        document.getElementById("mbranch").innerText = "* Required field";
+		document.getElementById("mbranch").style.color = "red";
+       document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        b=0;
+	  }
+	  else {
+        document.getElementById("mbranch").innerText = "InValid Branch";
+		document.getElementById("mbranch").style.color = "red";
+       document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        b=0;
+	  }
+  }
+	
+	branch.onfocus = function() {
+  document.getElementById("mbranch").style.display = "block";
+}
+
+branch.onblur = function() {
+  document.getElementById("mbranch").style.display = "none";
+}
+university.onfocus = function() {
+  document.getElementById("muniversity").style.display = "block";
+}
+
+university.onblur = function() {
+  document.getElementById("muniversity").style.display = "none";
+}
+state.onfocus = function() {
+  document.getElementById("mstate").style.display = "block";
+}
+
+state.onblur = function() {
+  document.getElementById("mstate").style.display = "none";
+}
+address.onfocus = function() {
+  document.getElementById("maddress").style.display = "block";
+}
+
+address.onblur = function() {
+  document.getElementById("maddress").style.display = "none";
+}
+username.onfocus = function() {
+  document.getElementById("musername").style.display = "block";
+}
+
+username.onblur = function() {
+  document.getElementById("musername").style.display = "none";
+}
+    
+    fname.onfocus = function() {
+  document.getElementById("muname").style.display = "block";
+}
+
+fname.onblur = function() {
+  document.getElementById("muname").style.display = "none";
+}
+age.onfocus = function() {
+  document.getElementById("mage").style.display = "block";
+}
+
+age.onblur = function() {
+  document.getElementById("mage").style.display = "none";
+}
+email.onfocus = function() {
+  document.getElementById("memail").style.display = "block";
+}
+
+email.onblur = function() {
+  document.getElementById("memail").style.display = "none";
+}
+number.onfocus = function() {
+  document.getElementById("mnumber").style.display = "block";
+}
+
+number.onblur = function() {
+  document.getElementById("mnumber").style.display = "none";
+}
+
+	pswd.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+pswd.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+	function test(event)
+        {
+            let code=event.which;
+            if(code>47&&code<58)
+            return false;
+            else
+            return true;
         }
+	fname.onkeyup = function() {
+	  const reg = /^[a-zA-Z]{1,}$/;
+	  if (reg.test(fname.value.trim())) {
+        var nme = fname.value.charAt(0).toUpperCase() + fname.value.slice(1);
+        document.getElementById("fname").value= nme;
+		span[0].innerText = "Your First Name is Valid";
+		span[0].style.color = "lime";
+        document.getElementById("age").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("no").disabled = false;
+        document.getElementById("pswd").disabled = false;
+        document.getElementById("branch").disabled = false;
+        document.getElementById("university").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("username").disabled = false;
+        document.getElementById("reg").disabled = false;
+        f=1;
+	  } 
+	  else if(fname.value.trim()==''){
+		span[0].innerText = "* Required field";
+		span[0].style.color = "red";
+        document.getElementById("age").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        f=0;
         
-      comment.onfocus = function() {
-      document.getElementById("mcomment").style.display = "block";
-    }
-    
-    // When the user clicks outside of the password field, hide the message box
-    comment.onblur = function() {
-      document.getElementById("mcomment").style.display = "none";
-    }
-    
-    comment.onkeyup = function() {
-          const reg = /^[a-zA-Z0-9]{1,}$/;
-          if (reg.test(comment.value.trim())) {
-          mcomment.classList.remove("invalid");
-        mcomment.classList.add("valid");
-          } 
-          else if(comment.value.trim()==''){
-          mcomment.classList.remove("valid");
-          mcomment.classList.add("invalid");
-          }
-          else {
-          mcomment.classList.remove("valid");
-          mcomment.classList.add("invalid");
-          }
+	  }
+	  else {
+		span[0].innerText = "Invalid First Name";
+		span[0].style.color = "red";
+        document.getElementById("age").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        f=0;
+	  }
+	}
+	age.onkeydown = function() {
+	//   const reg = /^[0-9]{1,}$/;
+	  if ((age.value>0)&&(age.value<100)) {
+		document.getElementById("mage").innerText = "Your age is Valid";
+		document.getElementById("mage").style.color = "lime";
+        document.getElementById("fname").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("no").disabled = false;
+        document.getElementById("pswd").disabled = false;
+        document.getElementById("branch").disabled = false;
+        document.getElementById("university").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("username").disabled = false;
+        document.getElementById("reg").disabled = false;
+        a=1;
+	  } 
+	  else if(age.value.trim()==''){
+		document.getElementById("mage").innerText = "* Required field";
+		document.getElementById("mage").style.color = "red";
+        document.getElementById("fname").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        a=0;
+	  }
+	  else {
+		document.getElementById("mage").innerText = "Invalid age Name";
+		document.getElementById("mage").style.color = "red";
+        document.getElementById("fname").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        a=0;
+	  }
+	}
+	pswd.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+	pswd.onkeyup = function() {
+    // strength();
+  // Validate lowercase letters
+  
+  let strongPassword = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/
+    let mediumPassword = /((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))/
+    if(pswd.value.match(strongPassword)) {
+      // strength.style.color = "green"
+      // strength.textContent = 'Strong'
+      mstrength.classList.remove("invalid");
+      mstrength.classList.remove("mvalid");
+      mstrength.classList.add("valid");
+      document.getElementById("mstrength").style.display = "block";
+      document.getElementById("mstrength").innerHTML = "Strong";
+      document.getElementById("fname").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("no").disabled = false;
+        document.getElementById("age").disabled = false;
+        document.getElementById("branch").disabled = false;
+        document.getElementById("university").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("username").disabled = false;
+        document.getElementById("reg").disabled = false;
+        p=1;
+     // strength.style.display = 'block'
+        } else if(pswd.value.match(mediumPassword)){
+          mstrength.classList.remove("invalid");
+      mstrength.classList.remove("valid");
+      mstrength.classList.add("mvalid");
+          document.getElementById("mstrength").style.display = "block";
+          document.getElementById("mstrength").innerHTML = "Medium";
+          document.getElementById("fname").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        p=0;
+        } else{
+          mstrength.classList.remove("valid");
+      mstrength.classList.remove("mvalid");
+      mstrength.classList.add("invalid");
+          document.getElementById("mstrength").style.display = "block";
+          document.getElementById("mstrength").innerHTML = "Weak";
+          document.getElementById("fname").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+        p=0;
         }
-      $("input:checkbox").on('click', function() {
-      // in the handler, 'this' refers to the box clicked on
-      var $box = $(this);
-      if ($box.is(":checked")) {
-        // the name of the box is retrieved using the .attr() method
-        // as it is assumed and expected to be immutable
-        var group = "input:checkbox[name='" + $box.attr("name") + "']";
-        // the checked state of the group/box on the other hand will change
-        // and the current value is retrieved using .prop() method
-        $(group).prop("checked", false);
-        $box.prop("checked", true);
-      } else {
-        $box.prop("checked", false);
-      }
-    });
-    </script>
+
+
+  var lowerCaseLetters = /[a-z]/g;
+  if(pswd.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+    p=1;
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+    p=0;
+  }
+  var numbers = /[0-9]/g;
+  if(pswd.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+    p=1;
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+    // document.getElementById("fname").disabled = false;
+    //     document.getElementById("email").disabled = false;
+    //     document.getElementById("no").disabled = false;
+    //     document.getElementById("age").disabled = false;
+    p=0;
+  }
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(pswd.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+    p=1;
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+    // document.getElementById("fname").disabled = false;
+    //     document.getElementById("email").disabled = false;
+    //     document.getElementById("no").disabled = false;
+    //     document.getElementById("age").disabled = false;
+    p=0;
+  }
+
+  //Validate special char
+  var specialchar = /[~`!@#$%^&*\(\)\-_+={}\[\]|\\;:"<>,./?]/g;
+  if(pswd.value.match(specialchar)) {  
+    special.classList.remove("invalid");
+    special.classList.add("valid");
+    p=1;
+  } else {
+    special.classList.remove("valid");
+    special.classList.add("invalid");
+    // document.getElementById("fname").disabled = false;
+    //     document.getElementById("email").disabled = false;
+    //     document.getElementById("no").disabled = false;
+    //     document.getElementById("age").disabled = false;
+    p=0;
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(pswd.value.match(numbers)) {  
+    num.classList.remove("invalid");
+    num.classList.add("valid");
+    p=1;
+  } else {
+    num.classList.remove("valid");
+    num.classList.add("invalid");
+    // document.getElementById("fname").disabled = false;
+    //     document.getElementById("email").disabled = false;
+    //     document.getElementById("no").disabled = false;
+    //     document.getElementById("age").disabled = false;
+    p=0;
+  }
+  
+  // Validate length
+  if(pswd.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+    p=1;
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+    // document.getElementById("fname").disabled = false;
+    //     document.getElementById("email").disabled = false;
+    //     document.getElementById("no").disabled = false;
+    //     document.getElementById("age").disabled = false;
+    p=0;
+  }
+}
+	number.onkeydown = function() {
+	  const regnum = /^[0-9]{9}$/;
+	  if (regnum.test(number.value)) {
+		document.getElementById("mnumber").innerText = "Your Number is Valid";
+		document.getElementById("mnumber").style.color = "lime";
+        document.getElementById("fname").disabled = false;
+        document.getElementById("email").disabled = false;
+        document.getElementById("pswd").disabled = false;
+        document.getElementById("age").disabled = false;
+        document.getElementById("branch").disabled = false;
+        document.getElementById("university").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("username").disabled = false;
+        document.getElementById("reg").disabled = false;
+	  } 
+	  else if(number.value.trim()==''){
+		document.getElementById("mnumber").innerText = "* Required field";
+		document.getElementById("mnumber").style.color = "red";
+        document.getElementById("fname").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+	  }
+	  else {
+		document.getElementById("mnumber").innerText = "Invalid Phone Number";
+		document.getElementById("mnumber").style.color = "red";
+        document.getElementById("fname").disabled = true;
+        document.getElementById("email").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+	  }
+	}
+    
+email.onkeyup = function() {
+	  // const reg = /^[a-zA-Z0-9]{1,}$/;
+	  // if (reg.test(uemail.value.trim())) {
+      const regex1=/^([a-z0-9\.-]+)@christuniversity.in$/;
+       const regex2= /^([a-z0-9\.-]+)@([a-z0-9]+)\christuniversity.in$/;
+       if(regex1.test(email.value) || regex2.test(email.value))
+       {
+        document.getElementById("memail").innerText = "Valid Email";
+		document.getElementById("memail").style.color = "lime";
+      document.getElementById("fname").disabled = false;
+        document.getElementById("age").disabled = false;
+        document.getElementById("pswd").disabled = false;
+        document.getElementById("no").disabled = false;
+        document.getElementById("branch").disabled = false;
+        document.getElementById("university").disabled = false;
+        document.getElementById("state").disabled = false;
+        document.getElementById("address").disabled = false;
+        document.getElementById("username").disabled = false;
+        document.getElementById("reg").disabled = false;
+      e=1;
+	  } 
+	  else if(email.value.trim()==''){
+        document.getElementById("memail").innerText = "* Required field";
+		document.getElementById("memail").style.color = "red";
+      e=0; document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+	  }
+	  else {
+        document.getElementById("memail").innerText = "InValid Email";
+		document.getElementById("memail").style.color = "red";
+      e=0; document.getElementById("fname").disabled = true;
+        document.getElementById("age").disabled = true;
+        document.getElementById("pswd").disabled = true;
+        document.getElementById("no").disabled = true;
+        document.getElementById("branch").disabled = true;
+        document.getElementById("university").disabled = true;
+        document.getElementById("state").disabled = true;
+        document.getElementById("address").disabled = true;
+        document.getElementById("username").disabled = true;
+        document.getElementById("reg").disabled = true;
+	  }
+  }
+
+  function submit_form()
+{
+  
+  if(f==0){
+    document.getElementById("muname").style.display = "block";
+    document.getElementById("muname").innerText = "Invalid name";
+		document.getElementById("muname").style.color = "red";
+    return false;
+  }
+  else if(a==0)
+  {
+  document.getElementById("mage").style.display = "block";
+  document.getElementById("mage").innerText = "Invalid age";
+		document.getElementById("mage").style.color = "red";
+    return false;
+  }
+  else if(e==0)
+  {
+    document.getElementById("memail").style.display = "block";
+    document.getElementById("memail").innerText = "Invalid email";
+		document.getElementById("memail").style.color = "red";
+      return false;
+  }
+  else if(n==0)
+  {
+    document.getElementById("mnumber").style.display = "block";
+    document.getElementById("mnumber").innerText = "Invalid number";
+		document.getElementById("mnumber").style.color = "red";
+      return false;
+  }
+  else if(p==0)
+  {
+    document.getElementById("message").style.display = "block";
+    document.getElementById("message").innerText = "Invalid password";
+		document.getElementById("message").style.color = "red";
+    return false;
+  }
+  else if(b==0)
+  {
+    document.getElementById("mbranch").style.display = "block";
+    document.getElementById("mbranch").innerText = "Invalid branch";
+		document.getElementById("mbranch").style.color = "red";
+    return false;
+  }
+  else if(u==0)
+  {
+    document.getElementById("muniversity").style.display = "block";
+    document.getElementById("muniversity").innerText = "Invalid university";
+		document.getElementById("muniversity").style.color = "red";
+    return false;
+  }
+  else if(s==0)
+  {
+    document.getElementById("mstate").style.display = "block";
+    document.getElementById("mstate").innerText = "Invalid state";
+		document.getElementById("mstate").style.color = "red";
+    return false;
+  }
+  else if(d==0)
+  {
+    document.getElementById("maddress").style.display = "block";
+    document.getElementById("maddress").innerText = "Invalid Address";
+		document.getElementById("maddress").style.color = "red";
+    return false;
+  }
+  else if(un==0)
+  {
+    document.getElementById("musername").style.display = "block";
+    document.getElementById("musername").innerText = "Invalid Username";
+		document.getElementById("musername").style.color = "red";
+    return false;
+  }
+  else{
+    // username and email in cookies
+    //Add their phone number and email in Local Storage
+    document.cookie="name="+fname.value+";expires=Sun,13 Feb 2022 00:00:00 UTC;";
+              document.cookie="email="+email.value+";expires=Sun,13 Feb 2022 00:00:00 UTC;";
+              alert("Cookie Created Sucessfully");
+              localStorage.setItem('number',number.value);
+              localStorage.setItem('email',email.value);
+              alert("Local Storage Created Sucessfully");
+    alert("Form Submitted");
+    return true;
+  }
+}
+</script>
+	
+  </script>
