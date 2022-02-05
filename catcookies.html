@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <head>
-   <title>Cookies</title>
-   <!-- <link href="bootstrap.css" rel="stylesheet"> -->
-   <!-- <link href="style.css" rel="stylesheet">
-   <link href="nav.css" rel="stylesheet">
-   <link href="responsive.css" rel="stylesheet"> -->
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="trainreservation/css/bootstrap.css">
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
-   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-   <link href="color-switcher-design.css" rel="stylesheet"> -->
-   <!-- CSS -->
+   
+   <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+
+    <meta name="author" content="Codeconvey" />
+    
+    <link rel="stylesheet" href="css/style.css">
    <style>
       body {
-         background-color: blue ;
+         /* background-color: blanchedalmond ; */
       overflow-x: hidden;
       }
       input {
-         color: black !important;
+         color:black !important;
          border:2px solid #000000 !important; 
 
       }
@@ -38,21 +36,30 @@
    <!--JavaScript-->
    <script></script>
 </head>
-       <body>
-  
-    <div class="forms" style="height:105% !important;">
-        <div class="form-content" >
-          <div class="login-form">
+       <body onload="defcolor()">
+   <!-- Vertical navbar -->
+
+
+   <!-- </div> style="background-color: blanchedalmond;"> -->
+   <div class="rt-container">
+    <div class="col-rt-12">
+        <div class="Scriptcontent">
+
+            <form class="reg-form">
+
             <div class="title">Add New User</div>
-          <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-               
-                
+         
               </div>
+            
+              
     
-      <form id = "frm" style="background-color: blanchedalmond;">
-        <div class="input-box" id="content">
+      <form id = "frm" >
+        <div class="rt-container">
+            <div class="col-rt-12">
+                
+        
+                    <!-- Start Student Registration Form -->
+                    
             <div style="align:right" >
                <select id="bg_color" onchange="chngcolor()">
                   <option value="pink">Pink</option>
@@ -60,69 +67,46 @@
                   <option value="yellow">Yellow</option>
                </select>
             </div>
-        </div>
+            
+   
         <div>
+            <div class="field-row">
+                <label class="form-label" for="firstName">Name</label>
+                <input type="text" id="name" class="field text-field first-name-field" required>
+                <span class="message"></span>
+            </div>
+            <div class="field-row">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" class="field text-field email-field" required>
+                <span class="message"></span>
+            </div>
+            <div class="field-row">
+                <label class="form-label" for="dateOfBirth">Date of birth</label>
+                <input type="date" id="dob" class="field date-field dob-field" min="1900-01-01"
+                    max="2015-09-18" required>
+                <span class="message"></span>
+                </div>
+          
+            
+      
+     
     
-        <div class="input-box" style="padding-top: 0 !important; margin-top: 0 !important;">
-          <i class="fas fa-user"></i>
-          <input type="text" class="modal-content"style="padding-top: 0 !important; margin-top: 0 !important;"  onkeypress="return test(event)" id="name" placeholder="Enter your name" required><br>
-     </div>
-          <div class="input-box">
-         <!-- <lable>E-mail</lable> -->
-         <i class="fas fa-envelope"></i>
-         <input type="email" class="modal-content" id="email" placeholder="Enter your email"></input>   
-      </div>
-      <div class="input-box">
-         <lable>Date of Birth</lable>
-         <input type="date" class="modal-content" id="dob" style="background:transparent; color:white; border:1px solid; border-color:white;"></input>   
-      </div>
-      <!-- <div class="col-sm-8 p-2">
-         <lable>Address</lable>
-         <div class="col-sm-10 p-2">
-            <lable>Address Line 1</lable>
-            <input type="text" class="modal-content" id="a1" placeholder="Address Line 1" style="background:transparent; color:white; border:1px solid; border-color:white;"></input>       
-         </div>
-         <div class="col-sm-10 p-2">
-            <lable>Address Line 2</lable>
-            <input type="text" class="modal-content" id="a2" placeholder="Address Line 2" style="background:transparent; color:white; border:1px solid; border-color:white;"></input>       
-         </div>
-      </div>
-      <div class="col-sm-4 p-2">
-         <lable>Validity</lable>
-         <input type="date" class="modal-content" id="valid" placeholder="Validity" style="background:transparent; color:white; border:1px solid; border-color:white;"></input>   
-      </div> -->
-      <!-- <div class="btn-group col-sm-4 p-2"> -->
-         <!-- <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Select Image
-         </button> -->
-         <!-- <select id="image" class="modal-content form-select form-select-lg mb-3" style="background-color: transparent; color: white; border:1px solid; border-color:white" aria-label=".form-select-lg example">
-            <option selected style="background-color: black; color: white; border:1px solid; border-color:white;" >Select Image</option>
-            <option value="1.jpg" style="background-color: black; color: white; border:1px solid; border-color:white;">Image1</option>
-            <option value="2.jpg" style="background-color: black; color: white; border:1px solid; border-color:white;">Image2</option>
-        </select> -->
-         <!-- <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Image1</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Image2</a>
-         </div> -->
-      <!-- </div> -->
-      <div class="col-sm-4 p-2">
-         <input type="submit"  class="btn btn-light inline" value="Add Cookie" onclick="addcookie()"/><br/><br/>
-         <input type="button" value="Get Cookies" class="btn btn-light inline" onclick="readcookie()"/><br/><br/>
-         <input type="button" value="Remove Cookies" class="btn btn-light inline" onclick="removecookie()"/>
+        <div class="field-row">
+         
+
+         <input type="submit"  class="btn btn-light inline" value="Add Cookie" style="color: #0f0f0f;"onclick="addcookie()"/><br/><br/>
+         <input type="button" value="Get Cookies" class="btn btn-light inline" style="color: #0f0f0f;"onclick="readcookie()"/><br/><br/>
+         <input type="button" value="Remove Cookies" class="btn btn-light inline"style="color: #0f0f0f;" onclick="removecookie()"/>
       </div>
    
    </form>
-   </div>
+   
 
-   <script src="jquery.js"></script>
-   <script src="popper.min.js"></script>
-   <script src="bootstrap.min.js"></script>
-   <script src="jquery-ui.js"></script>
-   <script src="script.js"></script>
-   <!-- Color Setting -->
-   <script src="color-settings.js"></script>
+
+   
+ 
 </body>
+</form>
 </html>
 <script>
     
@@ -135,7 +119,7 @@
             else
             return true;
         }
-       window.onload = function() 
+      function defcolor() 
         {
            
          // alert("ÿes");
@@ -152,13 +136,16 @@
                if(list[i].split('=')[0]=="color")
                {
                   //alert("in if");
-                //   document.body.style.backgroundColor = list[i].split('=')[1];
-                document.getElementById('frm').style.backgroundColor = list[i].split('=')[1];
-                document.getElementsByClassName(form).style.backgroundColor = list[i].split('=')[1];
-                document.getElementsByClassName(container).style.backgroundColor = list[i].split('=')[1];
+                  document.body.style.backgroundColor = list[i].split('=')[1];
+               //  document.body.style.backgroundColor = list[i].split('=')[1];
+               //  document.getElementsByClassName(frm).style.backgroundColor = list[i].split('=')[1];
+               //  document.getElementsByClassName(frm).style.backgroundColor = list[i].split('=')[1];
                   document.getElementById("bg_color").value = list[i].split('=')[1];
                }
             }          
+            }
+            else{
+               // alert("no");
             }
             
         }
@@ -169,14 +156,14 @@
          // alert(document.cookie);
          localStorage.setItem('color',bg)
          sessionStorage.setItem('color', bg)
-         document.form.style.backgroundColor = bg;
-         document.getElementById(cont).style.backgroundColor = bg;
-                document.getElementsByClassName(container).style.backgroundColor = bg;
+         document.body.style.backgroundColor = bg;
+         // document.getElementById(frm).style.backgroundColor = bg;
+         //        document.getElementsByClassName(frm).style.backgroundColor = bg;
          }
 
         function addcookie()
         {
-          //alert("Enter");
+         //  alert("Enter");
           var name = document.getElementById("name").value;
         
            var email = document.getElementById("email").value;
