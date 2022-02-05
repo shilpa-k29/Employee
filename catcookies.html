@@ -119,7 +119,7 @@
             else
             return true;
         }
-      function defcolor() 
+       window.onload = function() 
         {
            
          // alert("ÿes");
@@ -136,16 +136,13 @@
                if(list[i].split('=')[0]=="color")
                {
                   //alert("in if");
-                  document.body.style.backgroundColor = list[i].split('=')[1];
-               //  document.body.style.backgroundColor = list[i].split('=')[1];
-               //  document.getElementsByClassName(frm).style.backgroundColor = list[i].split('=')[1];
-               //  document.getElementsByClassName(frm).style.backgroundColor = list[i].split('=')[1];
+                //   document.body.style.backgroundColor = list[i].split('=')[1];
+                document.getElementById('frm').style.backgroundColor = list[i].split('=')[1];
+                document.getElementsByClassName(form).style.backgroundColor = list[i].split('=')[1];
+                document.getElementsByClassName(container).style.backgroundColor = list[i].split('=')[1];
                   document.getElementById("bg_color").value = list[i].split('=')[1];
                }
             }          
-            }
-            else{
-               // alert("no");
             }
             
         }
@@ -163,7 +160,7 @@
 
         function addcookie()
         {
-         //  alert("Enter");
+          //alert("Enter");
           var name = document.getElementById("name").value;
         
            var email = document.getElementById("email").value;
